@@ -1,0 +1,58 @@
+#################################################################################################################################
+#															        #
+# PARAMETERS FOR SIMULATION OF THE DYNAMICS OF A FULL TWO-BODY SYSTEM (MSK UNITS)					    	#
+#															        #
+# Note: This code was developed to tack the orbital and librational motion of a gravitational full two-body system, using the 	#
+# 	bilinear finite element method developed for such purpose. In this code we defined the initial time of the simulation	#
+#	t0 = 0.0. As a quite original version, neither collisional detection or non-gravitational perturbations are included 	#
+# 	to this code.														#
+#															     	#
+# Frames:  OXYZ - Inertia frame													#
+#	   AXaYaZa - Alpha body fixed frame (Origin at Alpha’s mass center, using the principal axes of inertia) 		#
+#          BXbYbZb - Beta body fixed frame (Origin at Beta’s mass center, using the principal axes of inertia)		     	#
+#																#
+################################################################################################################################# 
+# 
+# Object filenames 
+# 
+AlphaFile	= didymosa.fe		# File name of the finite element model of Alpha
+BetaFile	= didymosb.fe	 	# File name of the finite element model of Beta
+#
+# Initial conditions of the binary system at t0 
+#
+AlphaPosX	= -10.988814245857894	# The x-coordinate of Alpha’s initial position (OXYZ), unit: m
+AlphaPosY	= -0.00000000000e+00  	# The y-coordinate of Alpha’s initial position (OXYZ), unit: m
+AlphaPosZ	= -0.00000000000e+00	# The z-coordinate of Alpha’s initial position (OXYZ), unit: m
+AlphaVelX	= -0.00000000000e-00	# The x-component of Alpha’s initial velocity (OXYZ), unit: m/s
+AlphaVelY	= -0.001582609137045 	# The y-component of Alpha’s initial velocity (OXYZ), unit: m/s
+AlphaVelZ	= -0.00000000000e-00	# The z-component of Alpha’s initial velocity (OXYZ), unit: m/s
+AlphaPhi	= +6.98131700798e+00	# The z-precession for initial orientation of the Alpha (OXYZ->AXaYaZa), unit: rad
+AlphaTheta	= +3.03687289847e+00	# The x’-nutation for initial orientation of the Alpha (OXYZ->AXaYaZa), unit: rad
+AlphaVarphi	= +4.55744813915e-01	# The z”-spin for initial orientation of the Alpha (OXYZ->AXaYaZa), unit: rad
+AlphaAngVelX	= +0.00000000000e+00	# The x-component of Alpha’s initial angular velocity (AXaYaZa), unit: rad/s
+AlphaAngVelY	= +0.00000000000e+00	# The y-component of Alpha’s initial angular velocity (AXaYaZa), unit: rad/s
+AlphaAngVelZ	= +7.72508853182e-04	# The z-component of Alpha’s initial angular velocity (AXaYaZa), unit: rad/s
+BetaPosX	= +1.18901118575e+03	# The x-coordinate of Beta’s initial position (OXYZ), unit: m 
+BetaPosY	= +0.00000000000e+00	# The y-coordinate of Beta’s initial position (OXYZ), unit: m
+BetaPosZ	= +0.00000000000e+00	# The z-coordinate of Beta’s initial position (OXYZ), unit: m
+BetaVelX	= +0.00000000000e-00	# The x-component of Beta’s initial velocity (OXYZ), unit: m/s
+BetaVelY	= +0.171641402804908	# The y-component of Beta’s initial velocity (OXYZ), unit: m/s
+BetaVelZ	= +0.00000000000e-00	# The z-component of Beta’s initial velocity (OXYZ), unit: m/s
+BetaPhi		= 0.00000000000	# The z-precession for initial orientation of the Beta (OXYZ->BXbYbZb), unit: rad
+BetaTheta	= 0.00000000000	# The x’-nutation for initial orientation of the Beta (OXYZ->BXbYbZb), unit: rad
+BetaVarphi	= 0.00000000000	# The z”-spin for initial orientation of the Beta (OXYZ->BXbYbZb), unit: rad
+BetaAngVelX	= +0.00000000000e+00	# The x-component of Beta’s initial angular velocity (BXbYbZb), unit: rad/s
+BetaAngVelY	= +0.00000000000e+00	# The y-component of Beta’s initial angular velocity (BXbYbZb), unit: rad/s
+BetaAngVelZ	= +1.580200099516274e-04	# The z-component of Beta’s initial angular velocity (BXbYbZb), unit: rad/s
+#
+# ODE solving option setting (only ODE78 is provided for now, symplectic algorithm will be added later)
+#
+AbsTol		= 1.0e-12		# Absolute tolerance 
+RelTol		= 1.0e-12		# Relative tolerance
+TimeEnd		= 10000000.0		# End time setting of simulation, with the start time 0.0 (t0), unit: s
+#
+
+
+
+
+
